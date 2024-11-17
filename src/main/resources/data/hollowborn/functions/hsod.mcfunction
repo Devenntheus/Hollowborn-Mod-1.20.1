@@ -1,0 +1,1 @@
+give @s hollowborn:hollowborn_sword_of_doom{Enchantments:[{id:"minecraft:mending",lvl:7777777},{id:"minecraft:unbreaking",lvl:7777777},{id:"minecraft:fire_aspect",lvl:7777777,hollowbornsword:1,sw14:1}],hollowbornsword:1,sw14:1,HideFlags:5} 1

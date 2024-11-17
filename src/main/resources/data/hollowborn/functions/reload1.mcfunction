@@ -1,0 +1,1 @@
+execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{sw14:1}}]}] unless score @s cool matches 1.. run function hollowborn:sword14

@@ -1,0 +1,26 @@
+{
+  "itemgroup.hollowborn": "§0Hollowborn",
+
+  "item.hollowborn.caladbolg": "§1§lCaladbolg",
+
+  "item.hollowborn.necrotic_sword_aura": "Necrotic Sword's Aura",
+  "item.hollowborn.necrotic_sword_blade": "Necrotic Sword's Blade",
+  "item.hollowborn.necrotic_sword_hilt": "Necrotic Sword's Hilt",
+  "item.hollowborn.doom_heart": "Doom Heart",
+  "item.hollowborn.doom_dragon_skull": "Doom Dragon Skull",
+  "item.hollowborn.void_aura": "Void Aura",
+
+  "item.hollowborn.hollowborn_sword_of_doom": "§1§lHollowborn Sword of Doom",
+  "item.hollowborn.hollowbornswordofdoom.quality": "§d§nHeirloom Quality",
+  "item.hollowborn.hollowbornswordofdoom.tooltip1":"Unique Effect: Soul Anguish",
+  "item.hollowborn.hollowbornswordofdoom.tooltip2":"Tortured souls radiate from you,",
+  "item.hollowborn.hollowbornswordofdoom.tooltip3":"damaging any nearby enemies.",
+  "item.hollowborn.hollowbornswordofdoom.tooltip4":"On Crouch Left Click: Obliterate",
+  "item.hollowborn.hollowbornswordofdoom.tooltip5":"A powerful slash that deals instant",
+  "item.hollowborn.hollowbornswordofdoom.tooltip6":"death, destroying living entities.",
+  "item.hollowborn.hollowbornswordofdoom.tooltip7":"After the slash subsides, grant you",
+  "item.hollowborn.hollowbornswordofdoom.tooltip8":"instant health, regeneration,",
+  "item.hollowborn.hollowbornswordofdoom.tooltip9":"and absorption.",
+  "item.hollowborn.compat.scaleSoul1": "You have the power to obliterate",
+  "item.hollowborn.compat.scaleSoul2": "the §9Soul§f of anyone."
+}

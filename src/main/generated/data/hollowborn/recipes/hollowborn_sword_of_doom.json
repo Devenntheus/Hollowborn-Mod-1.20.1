@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "2": {
+      "item": "hollowborn:necrotic_sword_aura"
+    },
+    "3": {
+      "item": "hollowborn:necrotic_sword_blade"
+    },
+    "4": {
+      "item": "hollowborn:doom_dragon_skull"
+    },
+    "5": {
+      "item": "hollowborn:necrotic_sword_hilt"
+    },
+    "6": {
+      "item": "hollowborn:void_aura"
+    },
+    "7": {
+      "item": "hollowborn:caladbolg"
+    },
+    "8": {
+      "item": "hollowborn:doom_heart"
+    }
+  },
+  "pattern": [
+    " 23",
+    "456",
+    "78 "
+  ],
+  "result": {
+    "item": "hollowborn:hollowborn_sword_of_doom"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,1 @@
+execute if entity @s[tag=sw14] run function hollowborn:sw14
