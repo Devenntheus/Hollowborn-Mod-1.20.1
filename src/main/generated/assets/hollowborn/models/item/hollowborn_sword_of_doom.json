@@ -1,7 +1,7 @@
 {
   "textures": {
     "0": "hollowborn:item/hollowborn_sword_of_doom",
-    "1": "hollowborn:item/void_aura_sprites",
+    "1": "hollowborn:item/void_lightning2",
     "particle": "hollowborn:item/hollowborn_sword_of_doom"
   },
   "elements": [
@@ -2937,12 +2937,7 @@
       "to": [19, 17.25, 4],
       "rotation": {"angle": -22.5, "axis": "y", "origin": [0, 0, 0]},
       "faces": {
-        "north": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "east": {"uv": [0, 0, 0, 16], "texture": "#missing"},
-        "south": {"uv": [0, 0, 16, 16], "texture": "#1"},
-        "west": {"uv": [0, 0, 0, 16], "texture": "#missing"},
-        "up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
-        "down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
+        "south": {"uv": [0, 0, 16, 16], "texture": "#1"}
       }
     },
     {
@@ -2951,12 +2946,7 @@
       "to": [12, 20, 10.25],
       "rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
       "faces": {
-        "north": {"uv": [16, 0, 0, 16], "texture": "#1"},
-        "east": {"uv": [0, 0, 0, 16], "texture": "#missing"},
-        "south": {"uv": [16, 0, 0, 16], "texture": "#1"},
-        "west": {"uv": [0, 0, 0, 16], "texture": "#missing"},
-        "up": {"uv": [0, 0, 16, 0], "texture": "#missing"},
-        "down": {"uv": [0, 0, 16, 0], "texture": "#missing"}
+        "north": {"uv": [16, 0, 0, 16], "texture": "#1"}
       }
     }
   ],
