@@ -2,6 +2,7 @@ package net.bird.hollowborn.item.custom;
 
 import net.bird.hollowborn.config.Config;
 import net.bird.hollowborn.config.ConfigDefaultValues;
+import net.bird.hollowborn.item.ModItems;
 import net.bird.hollowborn.util.HelperMethods;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.*;
@@ -11,9 +12,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.text.Style;
@@ -116,15 +120,32 @@ public class NecroticSwordOfDoom extends SwordItem {
             tooltip.add(Text.translatable("item.hollowborn.compat.scaleSoul1"));
             tooltip.add(Text.translatable("item.hollowborn.compat.scaleSoul2"));
         }
+
         super.appendTooltip(itemStack, world, tooltip, tooltipContext);
     }
+
+
 
     @Override
     public void onCraft(ItemStack stack, World world, PlayerEntity player) {
         super.onCraft(stack, world, player);
+        NbtCompound hsod = new NbtCompound();
+        NbtCompound sw14 = new NbtCompound();
+
         stack.addEnchantment(Enchantments.MENDING, 7);
         stack.addEnchantment(Enchantments.UNBREAKING, 7);
         stack.addEnchantment(Enchantments.FIRE_ASPECT, 7);
         stack.addHideFlag(ItemStack.TooltipSection.ENCHANTMENTS);
+
+        if(stack.hasNbt()) {
+            stack.getNbt().putInt("hollowbornsword", stack.getNbt().getInt("hollowbornsword") + 1);
+            stack.getNbt().putInt("sw14", stack.getNbt().getInt("sw14") + 1);
+
+        } else {
+            hsod.putInt("hollowbornsword", 1);
+            sw14.putInt("sw14", 1);
+            stack.setNbt(hsod);
+            stack.setNbt(sw14);
+        }
     }
 }

@@ -12,15 +12,15 @@
 
   "item.hollowborn.hollowborn_sword_of_doom": "§1§lHollowborn Sword of Doom",
   "item.hollowborn.hollowbornswordofdoom.quality": "§d§nHeirloom Quality",
-  "item.hollowborn.hollowbornswordofdoom.tooltip1":"Unique Effect: Soul Anguish",
+  "item.hollowborn.hollowbornswordofdoom.tooltip1":"Unique Effect: Soul Agony",
   "item.hollowborn.hollowbornswordofdoom.tooltip2":"Tortured souls radiate from you,",
   "item.hollowborn.hollowbornswordofdoom.tooltip3":"damaging any nearby enemies.",
-  "item.hollowborn.hollowbornswordofdoom.tooltip4":"On Crouch Left Click: Obliterate",
+  "item.hollowborn.hollowbornswordofdoom.tooltip4":"On Crouch Left Click: Weeping Soul",
   "item.hollowborn.hollowbornswordofdoom.tooltip5":"A powerful slash that deals instant",
   "item.hollowborn.hollowbornswordofdoom.tooltip6":"death, destroying living entities.",
   "item.hollowborn.hollowbornswordofdoom.tooltip7":"After the slash subsides, grant you",
   "item.hollowborn.hollowbornswordofdoom.tooltip8":"instant health, regeneration,",
   "item.hollowborn.hollowbornswordofdoom.tooltip9":"and absorption.",
   "item.hollowborn.compat.scaleSoul1": "You have the power to obliterate",
-  "item.hollowborn.compat.scaleSoul2": "the §9Soul§f of anyone."
+  "item.hollowborn.compat.scaleSoul2": "the §9Existence§f of anyone."
 }
