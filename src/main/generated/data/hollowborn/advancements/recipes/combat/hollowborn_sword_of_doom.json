@@ -6,67 +6,7 @@
         "items": [
           {
             "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_doom_dragon_skull": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_doom_heart": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_necrotic_sword_aura": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_necrotic_sword_blade": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_necrotic_sword_hilt": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
+              "hollowborn:caladbolg"
             ]
           }
         ]
@@ -75,38 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:hollowborn_sword_of_doom"
+        "recipe": "hollowborn:hollowborn_sword_of_doom"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_void_aura": {
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "hollowborn:hollowborn_sword_of_doom"
-            ]
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
-      "has_necrotic_sword_aura",
-      "has_necrotic_sword_blade",
-      "has_doom_dragon_skull",
-      "has_necrotic_sword_hilt",
-      "has_void_aura",
       "has_caladbolg",
-      "has_doom_heart",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:hollowborn_sword_of_doom"
+      "hollowborn:hollowborn_sword_of_doom"
     ]
   },
   "sends_telemetry_event": false

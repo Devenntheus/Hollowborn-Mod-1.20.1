@@ -2933,20 +2933,19 @@
     },
     {
       "name": "hollowborn_sword_of_doom_210",
-      "from": [2, 1.25, 4],
-      "to": [19, 17.25, 4],
-      "rotation": {"angle": -22.5, "axis": "y", "origin": [0, 0, 0]},
+      "from": [-2, 1, 7.95],
+      "to": [19.25, 20, 7.95],
       "faces": {
-        "south": {"uv": [0, 0, 16, 16], "texture": "#1"}
+        "north": {"uv": [0, 0, 16, 16], "texture": "#1"}
       }
     },
     {
       "name": "hollowborn_sword_of_doom_211",
-      "from": [-5, 4, 10.25],
-      "to": [12, 20, 10.25],
-      "rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
+      "from": [-2, 1, 8.625],
+      "to": [19.25, 20, 8.625],
+      "rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 16]},
       "faces": {
-        "north": {"uv": [16, 0, 0, 16], "texture": "#1"}
+        "south": {"uv": [16, 0, 0, 16], "texture": "#1"}
       }
     }
   ],
@@ -2994,7 +2993,7 @@
   },
   "groups": [
     {
-      "name": "emberfang_gravecleaver",
+      "name": "hollowborn_sword_of_doom",
       "origin": [8.25, 8, 15.9375],
       "color": 0,
       "children": [
@@ -3206,7 +3205,8 @@
         205,
         206,
         207,
-        208
+        208,
+        209
       ]
     }
   ]

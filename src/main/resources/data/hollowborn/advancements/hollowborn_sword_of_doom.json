@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "hollowborn:hollowborn_sword_of_doom"
+    },
+    "title": "§1Hollowborn",
+    "description": "Hail to the king, baby!",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "minecraft:textures/block/obsidian.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hollowborn:hollowborn_sword_of_doom"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
