@@ -2,7 +2,6 @@ package net.bird.hollowborn.item.custom;
 
 import net.bird.hollowborn.config.Config;
 import net.bird.hollowborn.config.ConfigDefaultValues;
-import net.bird.hollowborn.item.ModItems;
 import net.bird.hollowborn.util.HelperMethods;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.enchantment.*;
@@ -12,8 +11,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
@@ -30,7 +27,7 @@ import java.util.List;
 public class NecroticSwordOfDoom extends SwordItem {
 
     public NecroticSwordOfDoom(ToolMaterial toolMaterial, int attackDamage, float attackSpeed, Settings settings) {
-        super(toolMaterial, attackDamage, attackSpeed, settings);
+        super(toolMaterial, attackDamage, attackSpeed, settings.fireproof());
     }
 
     private static int stepMod = 0;
@@ -38,13 +35,19 @@ public class NecroticSwordOfDoom extends SwordItem {
     int radius = (int) Config.getFloat("soulAnguishRadius", "UniqueEffects", ConfigDefaultValues.soulAnguishRadius);
     float abilityDamage = Config.getFloat("soulAnguishDamage", "UniqueEffects", ConfigDefaultValues.soulAnguishDamage);
     float spellScalingModifier = Config.getFloat("soulAnguishSpellScaling", "UniqueEffects", ConfigDefaultValues.soulAnguishSpellScaling);
+    float soulAgonyDamage = 0f;
 
     @Override
     public void inventoryTick(ItemStack stack, World world, Entity user, int slot, boolean selected) {
-        float calculatedDamage = HelperMethods.commonSpellAttributeScaling(spellScalingModifier, user, "soul");
-        if (calculatedDamage > 0) {
-            abilityDamage = calculatedDamage;
-            scalesWithSpellPower = true;
+        abilityDamage = HelperMethods.getDamageForEntity(user);
+        scalesWithSpellPower = (abilityDamage != ConfigDefaultValues.soulAnguishDamage);
+
+        if (scalesWithSpellPower) {
+            soulAgonyDamage = abilityDamage / spellScalingModifier;
+            System.out.println("Soul Agony Damage (scaled): " + soulAgonyDamage);
+        } else {
+            soulAgonyDamage = abilityDamage;
+            System.out.println("Soul Agony Damage (player): " + soulAgonyDamage);
         }
 
         if (!user.getWorld().isClient() && user instanceof LivingEntity livingUser) {
@@ -53,7 +56,7 @@ public class NecroticSwordOfDoom extends SwordItem {
                         livingUser.getX() - radius, livingUser.getY() - radius, livingUser.getZ() - radius);
                 for (Entity entity : world.getOtherEntities(livingUser, box, EntityPredicates.VALID_LIVING_ENTITY)) {
                     if ((entity instanceof LivingEntity le) && HelperMethods.checkFriendlyFire((LivingEntity) entity, livingUser)) {
-                        le.damage(livingUser.getDamageSources().indirectMagic(user, user), abilityDamage);
+                        le.damage(livingUser.getDamageSources().indirectMagic(user, user), soulAgonyDamage);
                     }
                 }
                 double xpos = livingUser.getX() - (radius + 1);
@@ -85,8 +88,9 @@ public class NecroticSwordOfDoom extends SwordItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 7777777, 7));
         target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 7777777, 7));
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 7777777, 7));
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE, 200, 7));
         attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 200, 7));
         attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 200, 7));
         attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 200, 7));
@@ -123,8 +127,6 @@ public class NecroticSwordOfDoom extends SwordItem {
 
         super.appendTooltip(itemStack, world, tooltip, tooltipContext);
     }
-
-
 
     @Override
     public void onCraft(ItemStack stack, World world, PlayerEntity player) {

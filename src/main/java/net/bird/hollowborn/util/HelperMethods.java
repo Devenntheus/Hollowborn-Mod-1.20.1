@@ -159,16 +159,12 @@ public class HelperMethods {
                 && !(target instanceof VillagerEntity);
     }
 
-    public static float commonSpellAttributeScaling(float damageModifier, Entity entity, String magicSchool) {
+    public static float getDamageForEntity(Entity entity) {
         if (entity instanceof PlayerEntity) {
-            return damageModifier * 7f;
+            return ConfigDefaultValues.soulAnguishDamage;
+        } else {
+            return 7f;
         }
-
-        if (Config.getBoolean("compatEnableSpellPowerScaling", "General", ConfigDefaultValues.compatEnableSpellPowerScaling)) {
-            return damageModifier;
-        }
-
-        return damageModifier;
     }
 
     public static Style getStyle(String styleType) {

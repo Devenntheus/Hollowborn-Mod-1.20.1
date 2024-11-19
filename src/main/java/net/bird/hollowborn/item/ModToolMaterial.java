@@ -6,7 +6,7 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    DOOM(7, 7777777, 17f, 7777777f, 27,
+    DOOM(7, 7777777, 17f, 7777777f, 30,
                          () -> Ingredient.ofItems(ModItems.HOLLOWBORN_SWORD_OF_DOOM));
 
     private final int miningLevel;
