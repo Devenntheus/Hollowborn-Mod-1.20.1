@@ -1,7 +1,7 @@
-#Hollowborn Sword of Doom
+# Hollowborn Sword of Doom
 Try not to get your own shadow taken, hero! Ha ha!
 
-#Swords' Abilities
+# Swords' Abilities
 This shadow compels… DOOOOOOOOOOOM!!!
 
 - Unique Effect: Soul Agony
@@ -20,6 +20,6 @@ https://www.planetminecraft.com/data-pack/blades-of-majestica-46-custom-weapons-
 After the slash subsides, you gain Instant Health, Regeneration, and Absorption.
 This part was coded by me to add that final boss vibe when wielding the sword, along with some debuff effects on enemies.
 
-#Sword Design
+# Sword Design
 Credits to: nongko99 - Fantasy 3D Weapons CIT: The Revenant's Gracecleaver
 https://www.curseforge.com/minecraft/texture-packs/nongko-3d-weapons
